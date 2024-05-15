@@ -27,5 +27,5 @@ print(programming_dict)
 #Loop through a dictionary
 for key in programming_dict:
     print(key) #print the key
-    print(programming_dict[key]). # prints the key's Value
+    print(programming_dict[key]) # prints the key's Value
     
