@@ -20,8 +20,8 @@ def random_color():
     r = randint(0, 255)
     g = randint(0, 255)
     b = randint(0, 255)
-    random_color =  (r, g, b)
-    return random_color
+    colors =  (r, g, b)
+    return colors
 
 for i in range(200):
     tim.color(random_color())
