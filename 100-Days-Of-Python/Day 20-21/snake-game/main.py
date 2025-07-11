@@ -1,20 +1,28 @@
-# 1. Create a snake body
-# 2. Move the snake
-# 3. Control the snack
-# 4. Detect collision with food
-# 5. create a scoreboard
-# 6. Detect collision with wall
-# 7. Detect collision with tail
-
 from turtle import Screen, Turtle
-
-snake = Turtle("square") # can provide the shape while creating an object
-snake.shapesize(1, 3)
-snake.color("white")
-
+from snake import Snake
+import time
 
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game")
+screen.tracer(0)
+
+snake = Snake()
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+is_game_on = True
+while is_game_on:
+    screen.update()
+    time.sleep(0.1)
+
+    snake.move()
+
+
 screen.exitonclick()
+
