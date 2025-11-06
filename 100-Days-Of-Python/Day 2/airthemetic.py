@@ -1,4 +1,4 @@
-# PEMDAS - Par-Exp-Mul-Div-Add-Sub (It goes L - R)
+# PEMDASLR - Par-Exp-Mul-Div-Add-Sub (It goes L - R)
 # Division return the float data type
  
 print(3 * (3 + 3)  / 3 - 3)
