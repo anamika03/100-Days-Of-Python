@@ -24,6 +24,7 @@ for char in range(1, number_count + 1):
 # print(password)
 random.shuffle(password)
 
+# This will turn the list into a string
 password_char = ""
 for char in password:
   password_char += char
