@@ -10,4 +10,3 @@ isWinning = True
 print(f"your score is {score}, your height is {height}, your winning is {isWinning}")
 
 
-
