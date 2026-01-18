@@ -15,6 +15,7 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro Timer")
@@ -31,10 +32,10 @@ timer_label.grid(column=1, row=0)
 tick_label = Label(text="✔", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20))
 tick_label.grid(column=1, row=3)
 
-start_button = Button(text="Start", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20))
+start_button = Button(text="Start", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 20), highlightthickness=0)
 start_button.grid(column=0, row=2)
 
-reset_button = Button(text="Reset", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20))
+reset_button = Button(text="Reset", bg=YELLOW, fg=GREEN, font=(FONT_NAME, 20), highlightthickness=0)
 reset_button.grid(column=2, row=2)
 
 
