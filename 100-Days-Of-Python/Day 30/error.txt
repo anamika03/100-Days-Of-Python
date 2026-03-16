@@ -1,0 +1,48 @@
+Handling Errors & Exceptions 
+
+1. FileNotFoundError
+with open('file.txt') as file:
+    file.read()
+
+2. KeyError
+a_dict = {"key": "value"}
+value = a_dict["non_existent_key"]
+
+3. IndexError
+a_list = [1, 2, 3]
+value = a_list[5]
+
+4. TypeError
+result = "string" + 5
+
+5. ValueError
+number = int("not_a_number")
+
+6. ZeroDivisionError
+result = 10 / 0
+
+7. ImportError
+import non_existent_module
+
+8. AttributeError
+class MyClass:
+    pass
+obj = MyClass()
+value = obj.non_existent_attribute
+
+9. NameError
+value = undefined_variable
+
+10. SyntaxError
+eval('x === 5')
+
+11. IndentationError
+def my_function():
+print("This line is not indented properly")
+
+12. MemoryError
+a = [0] * (10**10)  # Attempting to create a
+
+13. OverflowError
+result = 10 ** 1000  # This will cause an overflow error
+
