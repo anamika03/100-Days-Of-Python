@@ -6,10 +6,11 @@ password = "fyyxitktgkzetqer"
 with smtplib.SMTP("smtp.gmail.com", 587) as connection:
     connection.starttls() 
     connection.login(user=my_email, password=password)
-    connection.sendmail(from_addr=my_email, 
-                        to_addrs="rashikasingh191@gmail.com", 
-                        msg="Subject:Test\n\nThis is the dummy email."
-                    )
+    connection.sendmail(
+        from_addr=my_email, 
+        to_addrs="rashikasingh191@gmail.com", 
+        msg="Subject:Test\n\nThis is the another dummy email."
+    )
 
 
 
