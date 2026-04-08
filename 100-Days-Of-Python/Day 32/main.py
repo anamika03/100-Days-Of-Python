@@ -1,32 +1,24 @@
 import smtplib
+import datetime as dt
+import random
 
-my_email = "singhanamika5647@gmail.com"
-password = "fyyxitktgkzetqer"
+MY_EMAIL = "singhanamika5647@gmail.com" 
+MY_PASSWORD = "owpywxwwvwqugzyf"
 
-with smtplib.SMTP("smtp.gmail.com", 587) as connection:
-    connection.starttls() 
-    connection.login(user=my_email, password=password)
-    connection.sendmail(
-        from_addr=my_email, 
-        to_addrs="rashikasingh191@gmail.com", 
-        msg="Subject:Test\n\nThis is the another dummy email."
+now = dt.datetime.now()
+weekday = now.weekday()
+if weekday == 4:  # Friday is represented by 4
+    with open("/Users/anamika/Documents/100_Days_of_Python/100-Days-Of-Python/Day 32/quotes.txt") as quote_file:
+        all_quotes = quote_file.readlines()
+        quote = random.choice(all_quotes)
+
+    print(quote)
+    with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+        connection.starttls() 
+        connection.login(MY_EMAIL, MY_PASSWORD)
+        connection.sendmail(
+        from_addr=MY_EMAIL, 
+        to_addrs=MY_EMAIL, 
+        msg=f"Subject:Monday Motivation\n\n{quote}"
     )
-
-
-
-
-
-
-
-
-
-
-
-#TLS stands for Transport Layer Security. 
-# It is a cryptographic protocol that provides secure communication over a computer network. 
-# When you use TLS, the data sent between your email client and the email server is encrypted,
-# making it more difficult for unauthorized parties to intercept and read the information. 
-# This helps protect your email credentials and the content of your emails from being accessed by malicious actors.
-
-
-              
+print("Email sent successfully!")
