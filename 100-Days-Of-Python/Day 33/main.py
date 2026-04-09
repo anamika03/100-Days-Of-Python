@@ -14,6 +14,10 @@
 # Endpoints are essential for defining how clients can interact with the API and what functionality is available.
 
 import requests
+from datetime import datetime
+
+MY_LAT = 49.934530
+MY_LNG = 11.583753
 
 # response = requests.get("http://api.open-notify.org/iss-now.json")
 # print(response) # This will print the response object, which contains information about the HTTP response received from the server. 
@@ -33,12 +37,28 @@ import requests
 
 # response.raise_for_status() # This line will raise an HTTPError if the HTTP request returned an unsuccessful status code (i.e., not in the 200-299 range).
 
-response = requests.get("http://api.open-notify.org/iss-now.json")
+# response = requests.get("http://api.open-notify.org/iss-now.json")
+# response.raise_for_status()
+
+# latitude = response.json()["iss_position"]["latitude"] # This line extracts the latitude of the International Space Station (ISS) from the JSON response received from the API.
+# longitude = response.json()["iss_position"]["longitude"] # This line extracts the longitude of the International Space Station (ISS) from the JSON response received from the API.
+
+# iss_position = (latitude, longitude) # This line creates a tuple called iss_position that contains the latitude and longitude of the ISS.
+
+# print(iss_position) # This will print the tuple containing the latitude and longitude of the International Space Station (ISS).
+
+parameters = {
+    "lat": MY_LAT,
+    "lng": MY_LNG,
+    "formatted": 0 #  0 indicates that the response should be returned in a raw or unformatted format, which may include additional details or metadata.
+}
+response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
 response.raise_for_status()
+data = response.json()
+sunrise = data["results"]["sunrise"]
+sunset = data["results"]["sunset"]
 
-latitude = response.json()["iss_position"]["latitude"] # This line extracts the latitude of the International Space Station (ISS) from the JSON response received from the API.
-longitude = response.json()["iss_position"]["longitude"] # This line extracts the longitude of the International Space Station (ISS) from the JSON response received from the API.
-
-iss_position = (latitude, longitude) # This line creates a tuple called iss_position that contains the latitude and longitude of the ISS.
-
-print(iss_position) # This will print the tuple containing the latitude and longitude of the International Space Station (ISS).
+print(sunrise.split("T")) # This line extracts the hour component of the sunrise time from the API response. It splits the sunrise time string at the "T" character to separate the date and time, then takes the second part (the time) and splits it again at the ":" character to isolate the hour component, which is then printed.
+print(sunset.split("T"))
+time_now = datetime.now()
+print(time_now.hour)
