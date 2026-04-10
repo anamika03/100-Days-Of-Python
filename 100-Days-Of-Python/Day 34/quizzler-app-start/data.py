@@ -15,6 +15,7 @@ data = response.json()
 question_data = data["results"]
 =======
     "type": "boolean",
+    "category": 18 
 }
 
 response = requests.get("https://opentdb.com/api.php?amount=10&category=18&type=boolean")
