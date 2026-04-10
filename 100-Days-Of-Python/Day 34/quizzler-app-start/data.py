@@ -4,6 +4,7 @@ import html
 parameters = {
     "amount": 10,
     "type": "boolean",
+    "category": 18 
 }
 
 response = requests.get("https://opentdb.com/api.php?amount=10&category=18&type=boolean")
