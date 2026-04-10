@@ -1,6 +1,8 @@
 from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
+from ui import QuizInterface
+
 
 <<<<<<< HEAD
 https://opentdb.com/api.php?amount=10&category=18&type=boolean&encode=url3986
@@ -16,6 +18,7 @@ for question in question_data:
 
 
 quiz = QuizBrain(question_bank)
+quiz_ui = QuizInterface(quiz)
 
 while quiz.still_has_questions():
     quiz.next_question()
