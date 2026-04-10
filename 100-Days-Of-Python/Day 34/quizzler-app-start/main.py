@@ -2,8 +2,11 @@ from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
 
+<<<<<<< HEAD
 https://opentdb.com/api.php?amount=10&category=18&type=boolean&encode=url3986
 
+=======
+>>>>>>> day34
 question_bank = []
 for question in question_data:
     question_text = question["question"]

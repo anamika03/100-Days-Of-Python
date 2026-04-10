@@ -2,6 +2,7 @@ import requests
 
 parameters = {
     "amount": 10,
+<<<<<<< HEAD
     "category": 18,
     "type": "boolean",
     "encode": "url3986"
@@ -11,6 +12,16 @@ response = requests.get("https://opentdb.com/api.php", params=parameters)
 response.raise_for_status()
 data = response.json()
 question_data = data["results"]
+=======
+    "type": "boolean",
+}
+
+response = requests.get("https://opentdb.com/api.php?amount=10&category=18&type=boolean")
+response.raise_for_status()
+data = response.json()
+question_data = response.json()["results"]
+
+>>>>>>> day34
 
 
 
