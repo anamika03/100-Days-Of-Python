@@ -5,5 +5,6 @@
         "sound": "off",
         "announcement": "off"
     },
-    "terminal.integrated.enableVisualBell": false
+    "terminal.integrated.enableVisualBell": false,
+    "livePreview.defaultPreviewPath": "/100-Days-Of-Python/Web Development/Day 44/6.1 Font Properties/font-family.html"
 }
