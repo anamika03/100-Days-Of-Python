@@ -1,0 +1,18 @@
+/* Cascading Style Sheets  */
+
+/* CSS is a language that describes the style of an HTML document. It describes how HTML elements should be displayed. */
+/* Sass - Syntactically Awesome Style Sheets - is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself. It provides mechanisms such as variables, nesting, and mixins to make CSS more maintainable and extendable. */
+/* Less - Leaner Style Sheets - is a backward-compatible language extension for CSS. It allows you to use variables, nested rules, mixins, functions, and more, all within a CSS-compatible syntax. Less extends CSS with dynamic behavior such as variables, mixins, operations, and functions. */
+
+/* Inline */
+/* <html style="background: red;" />   */
+
+/* Internal */
+/* <style>html {background: red;} </style> */
+
+/* External */
+/* <link rel="stylesheet" href="style.css" /> */ 
+
+h1 {
+    color:green
+}
