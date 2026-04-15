@@ -1,3 +1,9 @@
 {
-    "python.REPL.enableREPLSmartSend": false
+    "python.REPL.enableREPLSmartSend": false,
+    "accessibility.signals.enabled": false,
+    "accessibility.signals.terminalBell": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "terminal.integrated.enableVisualBell": false
 }
