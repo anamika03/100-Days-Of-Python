@@ -2,6 +2,10 @@
 # It works with your favorite parser to provide idiomatic ways of navigating, searching and modifying the parse tree. 
 # Beautiful Soup is often used for web scraping, which is the process of extracting data from websites.
 
+# Web Scraping is the process of extracting data from websites. Beautiful Soup is a Python library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
+# www.google.com/robots.txt - This file is used to give instructions to web robots about which pages on the website should not be scrapped or scanned. It is a standard used by websites to communicate with web crawlers and other web robots.
+
+
 from bs4 import BeautifulSoup
 # import lxml
 
@@ -12,12 +16,22 @@ soup = BeautifulSoup(contents, 'html.parser')
 print(soup.title)   # <title>Anamika's Personal Site</title>
 print(soup.title.name)  # title
 print(soup.title.string)    # Anamika's Personal Site
-print(soup.title.getText())  # Anamika's Personal Site
-print(soup.title.text)  # Anamika's Personal Site   
+# print(soup.title.getText())  # Anamika's Personal Site
+# print(soup.title.text)  # Anamika's Personal Site   
 
 all_anchor_tags = soup.find_all(name="a")
 for tag in all_anchor_tags:
     print(tag.getText())    # LinkedIn
     print(tag.get("href"))  # https://www.linkedin.com/in/anamika-srivastava-9b1a5b1b3/
 
-print("\n", all_anchor_tags)
+# print("\n", all_anchor_tags)
+
+
+name = soup.find(name="h1", id="name")
+print(name)
+
+heading = soup.find(name="h3", class_="heading")
+print(heading)
+
+company_url = soup.select_one(selector="p a")
+print(company_url)
