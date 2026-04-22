@@ -1,23 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://www.empireonline.com/movies/features/best-movies-2/"
-
-# Write your code below this line 👇
+URL = "https://appbrewery.github.io/bakeboard-hot-100/2026-04-18/"
 
 response = requests.get(URL)
-website_html = response.text
+soup = BeautifulSoup(response.text, "html.parser")
 
-soup = BeautifulSoup(website_html, "html.parser")
+all_songs = soup.find_all("h3", class_="chart-entry__title")
 
-all_movies = soup.find_all(name="h3", class_="title")
+song_titles = [song.get_text() for song in all_songs]
 
-movie_titles = [movie.getText() for movie in all_movies]
-movies = movie_titles[::-1]
+with open("songs.txt", "w") as file:
+    for song in song_titles:
+        file.write(f"{song}\n")
 
-with open("movies.txt", mode="w") as file:
-    for movie in movies:
-        file.write(f"{movie}\n")
+        
 
 
 '''
