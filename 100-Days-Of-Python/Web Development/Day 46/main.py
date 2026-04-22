@@ -1,22 +1,33 @@
 import requests
 from bs4 import BeautifulSoup
+import os
+from ytmusicapi import YTMusic
 
+
+# # Optional Troubleshooting Step - Check for browser.json before doing anything else
+# if not os.path.exists("browser.json"):
+#     print("browser.json not found.")
+#     print("You need to authenticate with YouTube Music first.")
+#     print("Run one of these commands in your terminal from this project folder:\n")
+#     print("  Mac:     pbpaste | ytmusicapi browser")
+#     print("  Windows: ytmusicapi browser\n")
+#     print("Copy the request headers from Firefox first.")
+#     print("This will create browser.json.")
+#     exit()
+
+# Scraping Bakeboard Hot 100
 date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
-year, month, day = date.split("-")
-print(f"You want to travel to the year {year}, month {month} and day {day}.")
 
+url = f"https://appbrewery.github.io/bakeboard-hot-100/{date}/"
+response = requests.get(url)
+response.raise_for_status()
 
-
-URL = f"https://appbrewery.github.io/bakeboard-hot-100/{year}-{month}-{day}/"
-
-response = requests.get(url=URL)
 soup = BeautifulSoup(response.text, "html.parser")
+song_names = [tag.getText().strip() for tag in soup.select("h3.chart-entry__title")]
+# print(song_names)
 
-song_names_spans = soup.select("h3", class_="chart-entry__title")
+yt = YTMusic("browser.json")
 
-song_names = [song.getText().strip() for song in song_names_spans]
-
-with open("song_files.txt", "w") as file:
-    for song in song_names:
-        file.write(f"{song}\n")
-
+# Verify authentication works
+playlists = yt.get_library_playlists()
+print(f"Found {len(playlists)} playlists in your library.")
