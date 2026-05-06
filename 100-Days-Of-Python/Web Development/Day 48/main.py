@@ -6,14 +6,12 @@
 
 from selenium import webdriver # Importing the webdriver module from the selenium package
 
+# Keep the browser open after the script ends
 chrome_options = webdriver.ChromeOptions() # Creating an instance of ChromeOptions to set options for the Chrome driver
 chrome_options.add_experimental_option("detach", True) # Adding the detach argument to keep the browser open after the script ends
 
 driver = webdriver.Chrome(options=chrome_options) # Creating a new instance of the Chrome driver
 driver.get("https://www.amazon.de") # Navigating to the Google homepage
 
-# driver.close() # Closes the current window, quitting the browser if it's the last window currently open.
-# driver.quit() # Quits the driver and closes every associated window.
-
-
-
+# driver.close() # Closes the current tab.
+# driver.quit() # Quits the entire browser
