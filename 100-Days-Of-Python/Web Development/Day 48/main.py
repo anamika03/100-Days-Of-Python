@@ -8,7 +8,6 @@ from selenium import webdriver # Importing the webdriver module from the seleniu
 from selenium.webdriver.common.by import By
 
 
-
 # Keep the browser open after the script ends
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True) 
