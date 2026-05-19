@@ -1,0 +1,30 @@
+2026/05/13-19:42:30.830 7e38e Creating DB /Users/anamika/Documents/100_Days_of_Python/100-Days-Of-Python/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb since it was missing.
+2026/05/13-19:42:30.835 7e38e Reusing MANIFEST /Users/anamika/Documents/100_Days_of_Python/100-Days-Of-Python/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/13-19:42:31.216 7e39f Level-0 table #5: started
+2026/05/13-19:42:31.236 7e39f Level-0 table #5: 853018 bytes OK
+2026/05/13-19:42:31.238 7e39f Delete type=0 #3
+2026/05/13-19:42:59.938 7e39f Level-0 table #7: started
+2026/05/13-19:42:59.958 7e39f Level-0 table #7: 981350 bytes OK
+2026/05/13-19:42:59.961 7e39f Delete type=0 #4
+2026/05/13-19:42:59.977 7e39f Level-0 table #9: started
+2026/05/13-19:42:59.992 7e39f Level-0 table #9: 826708 bytes OK
+2026/05/13-19:42:59.993 7e39f Delete type=0 #6
+2026/05/13-19:42:59.996 7e39f Compacting 1@0 + 1@1 files
+2026/05/13-19:43:00.024 7e39f Generated table #10@0: 37791 keys, 553180 bytes
+2026/05/13-19:43:00.024 7e39f Compacted 1@0 + 1@1 files => 553180 bytes
+2026/05/13-19:43:00.025 7e39f compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/13-19:43:00.042 7e3a0 Compacting 1@1 + 1@2 files
+2026/05/13-19:43:00.056 7e3a0 Generated table #11@1: 450 keys, 21423 bytes
+2026/05/13-19:43:00.056 7e3a0 Compacted 1@1 + 1@2 files => 21423 bytes
+2026/05/13-19:43:00.057 7e3a0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/13-19:43:00.058 7e3a0 Delete type=2 #7
+2026/05/13-19:43:00.058 7e3a0 Delete type=2 #10
+2026/05/13-19:43:00.058 7e3a0 Delete type=2 #5
+2026/05/13-19:43:00.058 7e3a0 Delete type=2 #9
+2026/05/13-19:43:00.369 7e39f Level-0 table #13: started
+2026/05/13-19:43:00.387 7e39f Level-0 table #13: 858422 bytes OK
+2026/05/13-19:43:00.389 7e39f Delete type=0 #8
+2026/05/13-19:43:00.392 7e39f Compacting 1@1 + 1@2 files
+2026/05/13-19:43:00.408 7e39f Generated table #14@1: 8976 keys, 388192 bytes
+2026/05/13-19:43:00.408 7e39f Compacted 1@1 + 1@2 files => 388192 bytes
+2026/05/13-19:43:00.409 7e39f compacted to: files[ 0 0 1 0 0 0 0 ]
