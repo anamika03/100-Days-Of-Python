@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-FB_EMAIL = YOUR FACEBOOK LOGIN EMAIL
-FB_PASSWORD = YOUR FACEBOOK PASSWORD
+FB_EMAIL = "rashikasingh191@gmail.com"
+FB_PASSWORD = "tegzav-cIrseg-7jixhe"
 
 driver = webdriver.Chrome()
 
