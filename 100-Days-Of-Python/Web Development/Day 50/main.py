@@ -1,52 +1,60 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import ElementClickInterceptedException, NoSuchElementException
 from time import sleep
 
-FB_EMAIL = "rashikasingh191@gmail.com"
-FB_PASSWORD = "tegzav-cIrseg-7jixhe"
+TINDOG_URL = "https://tindog.com"
+FACEBARK_EMAIL = "rashikasingh191@gmail.com"
+FACEBARK_PASSWORD = "anything"
 
 driver = webdriver.Chrome()
+driver.get(TINDOG_URL)
 
-driver.get("http://www.tinder.com")
-
+# Step 1 — open the login modal and click Facebark
 sleep(2)
-login_button = driver.find_element(By.XPATH, value='//*[text()="Log in"]')
-login_button.click()
+driver.find_element(By.XPATH, value='//*[text()="Log in"]').click()
+sleep(1)
+driver.find_element(By.CLASS_NAME, value='btn-facebark').click()
 
-sleep(2)
-fb_login = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div[1]/div/div[3]/span/div[2]/button')
-fb_login.click()
-
-#Switch to Facebook login window
+# Step 2 — Facebark login in popup
 sleep(2)
 base_window = driver.window_handles[0]
-fb_login_window = driver.window_handles[1]
-driver.switch_to.window(fb_login_window)
+facebark_window = driver.window_handles[1]
+driver.switch_to.window(facebark_window)
 print(driver.title)
 
-#Login and hit enter
-email = driver.find_element(By.XPATH, value='//*[@id="email"]')
-password = driver.find_element(By.XPATH, value='//*[@id="pass"]')
-email.send_keys(FB_EMAIL)
-password.send_keys(FB_PASSWORD)
+email = driver.find_element(By.ID, value='email')
+password = driver.find_element(By.ID, value='pass')
+email.send_keys(FACEBARK_EMAIL)
+password.send_keys(FACEBARK_PASSWORD)
 password.send_keys(Keys.ENTER)
 
-#Switch back to Tinder window
 driver.switch_to.window(base_window)
 print(driver.title)
 
-#Delay by 5 seconds to allow page to load.
-sleep(5)
+# Step 3 — dismiss the three popups
+sleep(3)
+driver.find_element(By.XPATH, value='//button[text()="Allow"]').click()
+sleep(1)
+driver.find_element(By.XPATH, value='//button[text()="Not interested"]').click()
+sleep(1)
+driver.find_element(By.XPATH, value='//button[text()="I Accept"]').click()
 
-#Allow location
-allow_location_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
-allow_location_button.click()
+# Step 4 — like all 20 dogs
+for n in range(20):
+    sleep(1)
+    try:
+        like_button = driver.find_element(By.CLASS_NAME, value='btn-like')
+        like_button.click()
+    except ElementClickInterceptedException:
+        # Match popup is in the way — dismiss it and continue
+        try:
+            driver.find_element(By.CSS_SELECTOR, value='.match-popup a').click()
+        except NoSuchElementException:
+            sleep(2)
+    except NoSuchElementException:
+        # Like button not loaded yet OR all dogs have been swiped — wait and retry
+        sleep(2)
 
-#Disallow notifications
-notifications_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[2]')
-notifications_button.click()
-
-#Allow cookies
-cookies = driver.find_element(By.XPATH, value='//*[@id="content"]/div/div[2]/div/div/div[1]/button')
-cookies.click()
+driver.quit()
