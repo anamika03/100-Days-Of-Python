@@ -8,3 +8,74 @@ Version Control System = Git + GitHub
 Deployment = Heroku + AWS + Azure
 Full Stack Developer = Front-End + Back-End + Database + Version Control System + Deployment 
 
+---------------------------------------------------------------------
+What Exactly is the Backend?
+Client :  User- going to browser and searched Google,com
+
+Server :  Basically just a powerful computer that's hooked up to the internet and it's on 24/7, always ready to receive requests over the internet.
+
+Database :  which is kind of like a souped up spreadsheet where you are storing all the information related to your website.
+
+---------------------------------------------------------------------
+What is Library?
+- Library is a set of reusable functions used by computer programs.
+- You are in full control when you call a method from a library and the control is then returned.
+- It's incorporated seamlessly into existing projects to add functionality that you can access using an API.
+- They are important in program linking and binding process.
+Example: jQuery is a JavaScript library that simplities DOM manipulation.
+
+Vs.
+
+What is Framework?
+- Framework is a piece of code that dictates the architecture of your project and aids in programs.
+- The code never calls into aframework, instead the framework calls you.
+- It cannot be seamlessly incorporated into an existing project. Instead it can be used when a new project is started.
+- They provide a standard way to build and deploy applications
+Example: AngularJS is a JavaScript-based framework for dynamic web applications.
+
+--------------------------------------------------------------------
+Flask Quickstart Documents:
+https://flask.palletsprojects.com/en/stable/quickstart/
+
+---------------------------------------------------------------------
+A minimal Flask application looks something like this:
+
+hello_flask.py 
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+
+To run the flask server: use this command in terminal 
+-> export FLASK_APP=hello_flask.py 
+-> flask run
+Now it will give uou the localhost url to access the server.
+
+OR
+-> flask --app hello_flask run. # hello_flask is filename
+
+
+To stop the flask:
+-> jobs  # it will show the running jobs
+-> kill %2  # 2 is the job id 
+
+OR
+Simply click the CTRL + C 
+
+----------------------------------------------------------------
+Command line is also known as a shell.
+
+Operating system is a pistachio, then the actual nut is the kernal.
+
+Kernal: Kernal refers to the actual program that interfaces with the hardware. so it's the core of the operating system. 
+
+Shell is the pistachio OR
+Shell: Shell in computing refers to the user interface for you as a human to be able to interact with kernal and in turn with the hardware of your computer. 
+And there's two variants to the shell.
+1. GUI: Graphical User Interface 
+2. CLI: Command Line Interface 
