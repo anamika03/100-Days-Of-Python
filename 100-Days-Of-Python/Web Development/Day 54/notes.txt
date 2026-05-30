@@ -8,3 +8,25 @@ Version Control System = Git + GitHub
 Deployment = Heroku + AWS + Azure
 Full Stack Developer = Front-End + Back-End + Database + Version Control System + Deployment 
 
+What Exactly is the Backend?
+Client :  User- going to browser and searched Google,com
+
+Server :  Basically just a powerful computer that's hooked up to the internet and it's on 24/7, always ready to receive requests over the internet.
+
+Database :  which is kind of like a souped up spreadsheet where you are storing all the information related to your website.
+
+What is Library?
+- Library is a set of reusable functions used by computer programs.
+- You are in full control when you call a method from a library and the control is then returned.
+- It's incorporated seamlessly into existing projects to add functionality that you can access using an API.
+- They are important in program linking and binding process.
+Example: jQuery is a JavaScript library that simplities DOM manipulation.
+
+Vs.
+
+What is Framework?
+- Framework is a piece of code that dictates the architecture of your project and aids in programs.
+- The code never calls into aframework, instead the framework calls you.
+- It cannot be seamlessly incorporated into an existing project. Instead it can be used when a new project is started.
+- They provide a standard way to build and deploy applications
+Example: AngularJS is a JavaScript-based framework for dynamic web applications.
