@@ -30,3 +30,6 @@ What is Framework?
 - It cannot be seamlessly incorporated into an existing project. Instead it can be used when a new project is started.
 - They provide a standard way to build and deploy applications
 Example: AngularJS is a JavaScript-based framework for dynamic web applications.
+
+Flask Quickstart Documents:
+https://flask.palletsprojects.com/en/stable/quickstart/
