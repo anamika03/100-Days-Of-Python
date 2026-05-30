@@ -79,3 +79,5 @@ Shell: Shell in computing refers to the user interface for you as a human to be 
 And there's two variants to the shell.
 1. GUI: Graphical User Interface 
 2. CLI: Command Line Interface 
+
+-----------------------------------------------------------------
