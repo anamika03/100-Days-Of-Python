@@ -8,6 +8,7 @@ Version Control System = Git + GitHub
 Deployment = Heroku + AWS + Azure
 Full Stack Developer = Front-End + Back-End + Database + Version Control System + Deployment 
 
+---------------------------------------------------------------------
 What Exactly is the Backend?
 Client :  User- going to browser and searched Google,com
 
@@ -15,6 +16,7 @@ Server :  Basically just a powerful computer that's hooked up to the internet an
 
 Database :  which is kind of like a souped up spreadsheet where you are storing all the information related to your website.
 
+---------------------------------------------------------------------
 What is Library?
 - Library is a set of reusable functions used by computer programs.
 - You are in full control when you call a method from a library and the control is then returned.
@@ -31,9 +33,11 @@ What is Framework?
 - They provide a standard way to build and deploy applications
 Example: AngularJS is a JavaScript-based framework for dynamic web applications.
 
+--------------------------------------------------------------------
 Flask Quickstart Documents:
 https://flask.palletsprojects.com/en/stable/quickstart/
 
+---------------------------------------------------------------------
 A minimal Flask application looks something like this:
 
 hello_flask.py 
@@ -59,3 +63,19 @@ OR
 To stop the flask:
 -> jobs  # it will show the running jobs
 -> kill %2  # 2 is the job id 
+
+OR
+Simply click the CTRL + C 
+
+----------------------------------------------------------------
+Command line is also known as a shell.
+
+Operating system is a pistachio, then the actual nut is the kernal.
+
+Kernal: Kernal refers to the actual program that interfaces with the hardware. so it's the core of the operating system. 
+
+Shell is the pistachio OR
+Shell: Shell in computing refers to the user interface for you as a human to be able to interact with kernal and in turn with the hardware of your computer. 
+And there's two variants to the shell.
+1. GUI: Graphical User Interface 
+2. CLI: Command Line Interface 
