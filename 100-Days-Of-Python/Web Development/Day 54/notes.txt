@@ -33,3 +33,25 @@ Example: AngularJS is a JavaScript-based framework for dynamic web applications.
 
 Flask Quickstart Documents:
 https://flask.palletsprojects.com/en/stable/quickstart/
+
+A minimal Flask application looks something like this:
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+To run the flask server: use this command in terminal
+-> flask --app hello_flask run. # hello_flask is filename
+
+OR 
+-> export FLASK_APP=hello_flask.py 
+-> flask run
+Now it will give uou the localhost url to access the server.
+
+To stop the flask:
+-> jobs  # it will show the running jobs
+-> kill %2  # 2 is the job id 
