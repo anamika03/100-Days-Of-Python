@@ -6,9 +6,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/<name>')
-def greet(name):
-    return f'Hello, {name + "03"}!'
+@app.route('/<name>/<int:age>')
+def greet(name, age):
+    return f'Hello, {name}! You are {age} years old.'
 
 @app.route('/bye')
 def bye():
