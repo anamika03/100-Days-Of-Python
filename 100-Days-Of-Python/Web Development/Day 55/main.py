@@ -15,7 +15,7 @@ def greet(name, age):
 
 @app.route('/bye')
 def bye():
-    return 'Goodbye!'
+    return '<b>Goodbye!</b>'
 
 if __name__ == '__main__':
     app.run(debug=True)
