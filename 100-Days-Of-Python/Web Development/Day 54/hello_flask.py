@@ -10,5 +10,5 @@ def hello_world():
 def say_bye():
     return 'Bye!'
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # This condition checks if the script is being run directly (as the main program) rather than imported as a module. If this condition is true, the code inside this block will be executed.
     app.run()
