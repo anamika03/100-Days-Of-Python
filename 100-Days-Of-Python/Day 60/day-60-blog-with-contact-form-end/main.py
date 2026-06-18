@@ -3,9 +3,8 @@ import smtplib
 import requests
 
 posts = requests.get("https://api.npoint.io/43644ec4f0013682fc0d").json()
-OWN_EMAIL = "singhanamika5647@gmail.com"
+OWN_EMAIL = "singhanamika5647@gmail.com" #for yahoo use "smtp.mail.yahoo.com"
 OWN_PASSWORD = "owpywxwwvwqugzyf"
-
 app = Flask(__name__)
 
 @app.route('/')
