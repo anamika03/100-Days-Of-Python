@@ -3,3 +3,8 @@ It'll allow us to layout and format our websites with ease and cut down on the a
 
 Bootstrap is a CSS framework.
 
+Cons: 
+- Very complicated due to lots of classes uses
+- customization not an option
+
+
