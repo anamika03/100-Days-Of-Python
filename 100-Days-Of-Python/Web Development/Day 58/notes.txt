@@ -7,4 +7,24 @@ Cons:
 - Very complicated due to lots of classes uses
 - customization not an option
 
+-------------------------------------------------------------------------
+12 Coloumn System
+- Auto Fit (equally divide)
+- Sized Coloumns
+- Mix Matched
 
+Available breakpoints:
+
+breakpoint          Class infix         Dimensions
+Extra small             None            <576px
+Small                   sm              >=576px
+Medium                  md              >=768px
+Large                   lg              >=992px
+Extra large             xl              >=1200px
+Extra extra large       xxl             >=1400px
+
+Defined as:
+<div class="row">
+    <div class="col-xxl-1 col col-xl-2 col-lg-4" col-md-6>Column 1</div>
+    <div class="col-xxl-11 col-xl-10 col-lg-8 col-md-6">Column 2</div>
+</div>
