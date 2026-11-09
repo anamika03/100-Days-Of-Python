@@ -1,0 +1,4 @@
+Program started
+Processing data
+e.
+ArithmeticError: This is an error message.
